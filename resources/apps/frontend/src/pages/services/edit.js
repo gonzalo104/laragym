@@ -38,7 +38,7 @@ class Component extends React.Component {
     return [
       {
         to: '/services',
-        label: 'Services',
+        label: 'Servicios',
       },
     ];
   }
@@ -66,7 +66,7 @@ class Component extends React.Component {
     if (!this.state.isLoaded) return <Loader show />;
     return (
       <React.Fragment>
-        <Breadcrumbs previous={this.previous} active="Edit Service" />
+        <Breadcrumbs previous={this.previous} active="Editart Servicio" />
         <Card>
           <CardBody className="position-relative">
             {this.state.isNotFound && 'Page Not Found'}

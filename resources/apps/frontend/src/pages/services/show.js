@@ -48,7 +48,7 @@ class Component extends React.Component {
     return [
       {
         to: '/services',
-        label: 'Services',
+        label: 'Servicios',
       },
     ];
   }
@@ -59,13 +59,13 @@ class Component extends React.Component {
     const {name, description, status, created_at, updated_at} = this.state.data;
     return (
       <React.Fragment>
-        <Breadcrumbs previous={this.previous} active="Service Information" />
+        <Breadcrumbs previous={this.previous} active="Servicio Información" />
         <Card>
           <CardBody className="position-relative">
             {this.state.isNotFound && 'Page Not Found'}
             <Form>
               <FormGroup>
-                <Label for="Name">Name</Label>
+                <Label for="Name">Nombre</Label>
                 <Input
                   type="text"
                   name="name"
@@ -78,7 +78,7 @@ class Component extends React.Component {
               </FormGroup>
 
               <FormGroup>
-                <Label for="description">Description</Label>
+                <Label for="description">Descripción</Label>
                 <Input
                   type="textarea"
                   name="description"
@@ -90,7 +90,7 @@ class Component extends React.Component {
               </FormGroup>
 
               <FormGroup>
-                <Label for="status">Status</Label>
+                <Label for="status">Estatus</Label>
                 <Input
                   type="text"
                   name="status"
@@ -104,7 +104,7 @@ class Component extends React.Component {
               <Row>
                 <Col md={6}>
                   <FormGroup>
-                    <Label for="created_at">Created At</Label>
+                    <Label for="created_at">Creado</Label>
                     <Input
                       type="text"
                       name="created_at"
@@ -118,7 +118,7 @@ class Component extends React.Component {
 
                 <Col md={6}>
                   <FormGroup>
-                    <Label for="updated_at">Updated At</Label>
+                    <Label for="updated_at">Actualizado</Label>
                     <Input
                       type="text"
                       name="updated_at"
@@ -134,7 +134,7 @@ class Component extends React.Component {
                 to={`/services/${id}/edit`}
                 className="btn btn-primary align-right"
               >
-                Edit Service
+                Editar Servicio
               </Link>
             </Form>
           </CardBody>

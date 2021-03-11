@@ -38,7 +38,7 @@ class Component extends React.Component {
     return [
       {
         to: '/billing-cycles',
-        label: 'Billing Cycles',
+        label: 'Ciclos de Facturación',
       },
     ];
   }
@@ -59,7 +59,10 @@ class Component extends React.Component {
     if (!this.state.isLoaded) return <Loader show />;
     return (
       <React.Fragment>
-        <Breadcrumbs previous={this.previous} active="Edit Billing Cycle" />
+        <Breadcrumbs
+          previous={this.previous}
+          active="Editar Ciclo de Facturación"
+        />
         <Card>
           <CardBody className="position-relative">
             {this.state.isNotFound && 'Page Not Found'}

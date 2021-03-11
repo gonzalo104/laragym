@@ -68,13 +68,13 @@ class Component extends React.Component {
   get headers() {
     return [
       'ID',
-      'Name',
-      'Billing Cycle',
-      'Service',
-      'Amount',
-      'Status',
-      'Updated',
-      'Actions',
+      'Nombre',
+      'Ciclo de Facturación',
+      'Servicio',
+      'Cantidad',
+      'Estatus',
+      'Actualizado',
+      'Acciones',
     ];
   }
 
@@ -85,11 +85,11 @@ class Component extends React.Component {
   };
 
   getTableActions = payload => {
-    let actions = [{label: 'Edit', href: `/packages/${payload.id}/edit`}];
+    let actions = [{label: 'Editar', href: `/packages/${payload.id}/edit`}];
 
     if (payload.status !== 'deleted') {
       actions.push({
-        label: 'Delete',
+        label: 'Eliminar',
         type: 'delete',
         color: 'text-danger',
       });
@@ -102,8 +102,8 @@ class Component extends React.Component {
     if (data.type === 'delete') {
       this.confirm.open({
         isOpen: true,
-        title: 'Delete',
-        content: 'Are you sure want to delete item?',
+        title: 'Eliminar',
+        content: '¿Estás seguro de eliminar el registro?',
         payload: data,
       });
       return;
@@ -116,17 +116,17 @@ class Component extends React.Component {
         <td>{item.id}</td>
         <td>
           <Link to={`/packages/${item.id}`}>
-            {item.name || 'Not Available'}
+            {item.name || 'No disponible'}
           </Link>
         </td>
         <td>
           <Link to={`/billing-cycles/${item.cycle.id}`}>
-            {item.cycle.name || 'Not Available'}
+            {item.cycle.name || 'No disponible'}
           </Link>
         </td>
         <td>
           <Link to={`/services/${item.service.id}`}>
-            {item.service.name || 'Not Available'}
+            {item.service.name || 'No disponible'}
           </Link>
         </td>
         <td>{item.amount}</td>
@@ -137,7 +137,7 @@ class Component extends React.Component {
         <td>
           <div className="d-flex justify-content-center">
             <TableActions
-              buttonLabel="Actions"
+              buttonLabel="Accciones"
               payload={item}
               items={this.getTableActions(item)}
               onClick={this.onClickAction}
@@ -151,7 +151,7 @@ class Component extends React.Component {
   render() {
     return (
       <Card>
-        <CardHeader>Manage Packages</CardHeader>
+        <CardHeader>Administrar Paquetes</CardHeader>
         <CardActions isLoading={this.state.isLoading} />
         <CardBody className="position-relative">
           {this.loader}

@@ -31,7 +31,7 @@ class Component extends React.Component {
         <Row>
           <Col md={2}>
             <StatusSelect
-              placeholder="Todos los estatus"
+              placeholder="Todos los Estatus"
               disabled={this.props.isLoading}
               defaultValue={get(this.state, 'status')}
               onChange={this.onChangeStatus}
@@ -48,7 +48,7 @@ class Component extends React.Component {
           <Col md={6} />
           <Col md={2}>
             <Link to="/services/create" className="float-right btn btn-primary">
-              <i className="fa fa-plus" /> Add Service
+              <i className="fa fa-plus" /> Agregar Servicio
             </Link>
           </Col>
         </Row>

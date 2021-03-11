@@ -48,7 +48,7 @@ export default class extends React.Component {
     return (
       <Form onSubmit={this.onSubmit}>
         <FormGroup>
-          <Label for="Name">Name</Label>
+          <Label for="Name">Nombre</Label>
           <Input
             type="text"
             name="name"
@@ -61,7 +61,7 @@ export default class extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <Label for="amount">Amount</Label>
+          <Label for="amount">Cantidad</Label>
           <Input
             type="number"
             name="amount"
@@ -74,13 +74,13 @@ export default class extends React.Component {
 
         {this.props.status && (
           <FormGroup>
-            <Label for="status">Status</Label>
+            <Label for="status">Estatus</Label>
             <StatusSelect defaultValue={this.props.status} name="status" />
           </FormGroup>
         )}
 
         <FormGroup>
-          <Label for="service_id">Service</Label>
+          <Label for="service_id">Servicio</Label>
           <ServiceSelect
             defaultValue={this.props.service_id}
             name="service_id"
@@ -88,7 +88,7 @@ export default class extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <Label for="cycle_id">Billing Cycle</Label>
+          <Label for="cycle_id">Ciclo de Facturación</Label>
           <CycleSelect defaultValue={this.props.cycle_id} name="cycle_id" />
         </FormGroup>
 
@@ -97,7 +97,7 @@ export default class extends React.Component {
           className="float-right"
           disabled={this.state.isSubmitting}
         >
-          {this.state.isSubmitting ? 'Please Wait...' : 'Submit Form'}
+          {this.state.isSubmitting ? 'Porfavor Espere...' : 'Enviar Formulario'}
         </Button>
       </Form>
     );

@@ -12,7 +12,7 @@ class Component extends React.Component {
     return [
       {
         to: '/services',
-        label: 'Services',
+        label: 'Servicios',
       },
     ];
   }
@@ -28,7 +28,7 @@ class Component extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Breadcrumbs previous={this.previous} active="Create Service" />
+        <Breadcrumbs previous={this.previous} active="Crear Servicio" />
         <Card>
           <CardBody>
             <Form onSubmit={this.onSubmit} />

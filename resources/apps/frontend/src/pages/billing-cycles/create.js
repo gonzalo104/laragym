@@ -12,7 +12,7 @@ class Component extends React.Component {
     return [
       {
         to: '/billing-cycles',
-        label: 'Billing Cycles',
+        label: 'Ciclos de Facturación',
       },
     ];
   }
@@ -28,7 +28,10 @@ class Component extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Breadcrumbs previous={this.previous} active="Create Billing Cycle" />
+        <Breadcrumbs
+          previous={this.previous}
+          active="Crear Ciclo de Facturación"
+        />
         <Card>
           <CardBody>
             <Form onSubmit={this.onSubmit} />

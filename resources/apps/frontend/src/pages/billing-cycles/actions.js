@@ -31,7 +31,7 @@ class Component extends React.Component {
         <Row>
           <Col md={2}>
             <StatusSelect
-              placeholder="All Status"
+              placeholder="Todos los Estados"
               disabled={this.props.isLoading}
               value={get(this.state, 'status')}
               onChange={this.onChangeStatus}
@@ -40,7 +40,7 @@ class Component extends React.Component {
           <Col md={2}>
             <Search
               disabled={this.props.isLoading}
-              name="search"
+              name="Buscar"
               value={get(this.state, 'q')}
               onSubmit={this.onSearch}
             />
@@ -51,7 +51,7 @@ class Component extends React.Component {
               to="/billing-cycles/create"
               className="float-right btn btn-primary"
             >
-              <i className="fa fa-plus" /> Add Billing Cycle
+              <i className="fa fa-plus" /> Agregar Ciclos de Facturación
             </Link>
           </Col>
         </Row>

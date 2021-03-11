@@ -44,7 +44,7 @@ export default class extends React.Component {
     return (
       <Form onSubmit={this.onSubmit}>
         <FormGroup>
-          <Label for="Name">Name</Label>
+          <Label for="Name">Nombre</Label>
           <Input
             type="text"
             name="name"
@@ -57,7 +57,7 @@ export default class extends React.Component {
         </FormGroup>
 
         <FormGroup>
-          <Label for="description">Description</Label>
+          <Label for="description">Descripción</Label>
           <Input
             type="textarea"
             name="description"
@@ -70,7 +70,7 @@ export default class extends React.Component {
 
         {this.props.status && (
           <FormGroup>
-            <Label for="status">Status</Label>
+            <Label for="status">Estatus</Label>
             <StatusSelect defaultValue={this.props.status} name="status" />
           </FormGroup>
         )}
@@ -80,7 +80,9 @@ export default class extends React.Component {
           className="float-right"
           disabled={this.state.isSubmitting}
         >
-          {this.state.isSubmitting ? 'Please Wait...' : 'Submit Form'}
+          {this.state.isSubmitting
+            ? 'Por favor Espere...'
+            : 'Enviar Formulario'}
         </Button>
       </Form>
     );

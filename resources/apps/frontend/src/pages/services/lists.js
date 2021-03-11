@@ -67,7 +67,7 @@ class Component extends React.Component {
   }
 
   get headers() {
-    return ['ID', 'Name', 'Status', 'Updated', 'Actions'];
+    return ['ID', 'Nombre', 'Estatus', 'Actualizado', 'Acciones'];
   }
 
   getTableActions() {}
@@ -77,11 +77,11 @@ class Component extends React.Component {
   };
 
   getTableActions = payload => {
-    let actions = [{label: 'Edit', href: `/services/${payload.id}/edit`}];
+    let actions = [{label: 'Editar', href: `/services/${payload.id}/edit`}];
 
     if (payload.status !== 'deleted') {
       actions.push({
-        label: 'Delete',
+        label: 'Eliminar',
         type: 'delete',
         color: 'text-danger',
       });
@@ -95,7 +95,7 @@ class Component extends React.Component {
       this.confirm.open({
         isOpen: true,
         title: 'Delete',
-        content: 'Are you sure want to delete item?',
+        content: '¿Estás seguro de eliminar el registro?',
         payload: data,
       });
       return;

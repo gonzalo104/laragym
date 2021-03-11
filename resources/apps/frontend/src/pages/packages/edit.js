@@ -38,7 +38,7 @@ class Component extends React.Component {
     return [
       {
         to: '/packages',
-        label: 'Packages',
+        label: 'Paquetes',
       },
     ];
   }
@@ -59,7 +59,7 @@ class Component extends React.Component {
     if (!this.state.isLoaded) return <Loader show />;
     return (
       <React.Fragment>
-        <Breadcrumbs previous={this.previous} active="Edit Package" />
+        <Breadcrumbs previous={this.previous} active="Editar Paquete" />
         <Card>
           <CardBody className="position-relative">
             {this.state.isNotFound && 'Page Not Found'}

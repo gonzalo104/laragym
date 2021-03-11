@@ -75,7 +75,7 @@ class Component extends React.Component {
               <Row>
                 <Col md={6}>
                   <FormGroup>
-                    <Label for="Name">Name</Label>
+                    <Label for="Name">Nombre</Label>
                     <Input
                       type="text"
                       name="name"
@@ -89,7 +89,7 @@ class Component extends React.Component {
                 </Col>
                 <Col md={3}>
                   <FormGroup>
-                    <Label for="amount">Amount</Label>
+                    <Label for="amount">Cantidad</Label>
                     <Input
                       type="text"
                       name="amount"
@@ -103,7 +103,7 @@ class Component extends React.Component {
 
                 <Col md={3}>
                   <FormGroup>
-                    <Label for="status">Status</Label>
+                    <Label for="status">Estatus</Label>
                     <Input
                       type="text"
                       name="status"
@@ -119,7 +119,7 @@ class Component extends React.Component {
               <Row>
                 <Col md={6}>
                   <FormGroup>
-                    <Label for="service">Service</Label>
+                    <Label for="service">Servicio</Label>
                     <Input
                       type="text"
                       required
@@ -130,7 +130,7 @@ class Component extends React.Component {
                 </Col>
                 <Col md={6}>
                   <FormGroup>
-                    <Label for="amount">Service ID</Label>
+                    <Label for="amount">Servicio ID</Label>
                     <Input
                       type="text"
                       required
@@ -144,7 +144,7 @@ class Component extends React.Component {
               <Row>
                 <Col md={6}>
                   <FormGroup>
-                    <Label>Billing Cycle</Label>
+                    <Label>Ciclo de Facturación</Label>
                     <Input
                       type="text"
                       required
@@ -155,7 +155,7 @@ class Component extends React.Component {
                 </Col>
                 <Col md={6}>
                   <FormGroup>
-                    <Label>Billing Cycle ID</Label>
+                    <Label>Ciclo de Facturación ID</Label>
                     <Input
                       type="text"
                       required
@@ -169,7 +169,7 @@ class Component extends React.Component {
               <Row>
                 <Col md={6}>
                   <FormGroup>
-                    <Label for="created_at">Created At</Label>
+                    <Label for="created_at">Creado</Label>
                     <Input
                       type="text"
                       name="created_at"
@@ -183,7 +183,7 @@ class Component extends React.Component {
 
                 <Col md={6}>
                   <FormGroup>
-                    <Label for="updated_at">Updated At</Label>
+                    <Label for="updated_at">Acctualizado</Label>
                     <Input
                       type="text"
                       name="updated_at"
@@ -199,7 +199,7 @@ class Component extends React.Component {
                 to={`/packages/${id}/edit`}
                 className="btn btn-primary align-right"
               >
-                Edit Package
+                Editar Paquete
               </Link>
             </Form>
           </CardBody>
